@@ -19,4 +19,7 @@ load: all
 	sudo chown $(USER) /dev/uio0
 	sudo chown $(USER) /dev/kvmfr0
 
+install:
+	$(MAKE) -C $(KDIR) M=$(PWD) modules_install
+
 .PHONY: test
